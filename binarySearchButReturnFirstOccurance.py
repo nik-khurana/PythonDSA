@@ -31,5 +31,5 @@ def binarySearch(nums,num):
 # print(binarySearch([1,2,3,4,5,6],7))
 # print(binarySearch([1,2,4,4,5,6],5))
 # print(binarySearch([2,2,3,4,5,6],2))
-print(binarySearch([5,5,5,5,5,5,5,5],5))
+print(binarySearch([4,5,5,5,5,5,5,5],5))
 # print(binarySearch([],0))

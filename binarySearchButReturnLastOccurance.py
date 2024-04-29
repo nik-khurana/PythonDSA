@@ -3,7 +3,7 @@
 
 def checkRight(nums,num,mid):
     if nums[mid]==num:
-        if ((nums[mid]==nums[mid+1]) and (mid+1<=len(nums))):
+        if (mid+1<len(nums)) and ((num==nums[mid+1])):
             return 'right'
         else:
             return 'match'
@@ -28,7 +28,7 @@ def binarySearch(nums,num):
     return -1
 
 
-print(binarySearch([5,5,5,5,5,5,5,5],5))
+print(binarySearch([5,5,5,5,5,5,5,6],5))
 
 # print(binarySearch([1,2,3,4,5,6],5))
 # print(binarySearch([1,2,3,4,5,6],7))
