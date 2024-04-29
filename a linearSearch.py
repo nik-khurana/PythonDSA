@@ -1,3 +1,4 @@
+# O(N)
 def linearSearch(nums,num):
     for i in range(len(nums)):
         if num==nums[i]:

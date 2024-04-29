@@ -1,5 +1,6 @@
 # Base Condition for Binary Search : Sorted Array
 # function below for list in ascending order
+# O(LogN)
 def binarySearch(nums,num):
     if len(nums)<1:
         return -1
