@@ -38,6 +38,7 @@ print(countNoOfRotations([5,1,2,2,4]))
 print(countNoOfRotations([4,5,1,2,3,4]))
 print(countNoOfRotations([1,1,1,1,1,1]))
 print(countNoOfRotations([2,3,4,5,1]))
+print(countNoOfRotations([5,6,6,9,9,9,0,0,2,3,3,3,3,4,4]))
 
 
 
