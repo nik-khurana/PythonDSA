@@ -84,3 +84,50 @@ def countNodes(self, root: Optional[TreeNode]) -> int:
 
 #TODO diameter of binary tree
 # distance bw 2 nodes
+
+
+#
+    https: // leetcode.com / problems / all - nodes - distance - k - in -binary - tree /
+    def distanceK(self, root, target, k):
+        """
+        :type root: TreeNode
+        :type target: TreeNode
+        :type k: int
+        :rtype: List[int]
+        """
+
+        parent = {}
+        parent[root] = None
+
+        def traverse(root1):
+            if root1 is None:
+                return
+            if root1.left not in parent and root1.left is not None:
+                parent[root1.left] = root1
+                traverse(root1.left)
+            if root1.right not in parent and root1.right is not None:
+                parent[root1.right] = root1
+                traverse(root1.right)
+
+        traverse(root)
+        print(parent)
+        l = []
+        visit = set()
+
+        def getListofNodes(root2, dist):
+            if root2 is None:
+                return
+            if root2 in visit:
+                return
+            visit.add(root2)
+            if dist == k:
+                print(dist)
+                l.append(root2.val)
+                return
+            dist += 1
+            getListofNodes(root2.left, dist)
+            getListofNodes(root2.right, dist)
+            getListofNodes(parent[root2], dist)
+
+        getListofNodes(target, 0)
+        return l
